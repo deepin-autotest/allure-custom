@@ -1,1 +1,1 @@
-# pytest-allure-custom
+# allure-custom
