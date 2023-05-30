@@ -1,7 +1,7 @@
 .side-nav__brand {
     background: url('logo.png') no-repeat left center !important;
     margin-left: auto;
-    height: 50px;
+    height: {{logo_height}};
     background-size: contain !important;
 }
 
@@ -10,8 +10,8 @@
 }
 
 .side-nav {
-    background-color: #21483F;
-    border-right: 3px solid #DEA400;
+    background-color: {{sidebar_color}};
+    border-right: {{sidebar_line_size}} solid {{sidebar_line_color}};
     font-family: 'Segoe UI';
 }
 

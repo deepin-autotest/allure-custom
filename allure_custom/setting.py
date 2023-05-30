@@ -27,6 +27,17 @@ class _Setting:
     sidebar_color = "#21483F"
     sidebar_line_size = "3px"
     sidebar_line_color = "#DEA400"
+    with open(os.path.join(_root_dir, "static", "styles.css"), "r", encoding="utf-8") as f:
+        style_css = f.read()
+    style_css = style_css.format(
+        logo_height=logo_height,
+        sidebar_color=logo_height,
+        sidebar_line_size=logo_height,
+        sidebar_line_color=logo_height,
+    )
+
+    with open(os.path.join(_root_dir, "static", "styles.css"), "w", encoding="utf-8") as f:
+        f.write(style_css)
 
     html_title = "funny_test"
     report_name = "funny_test"
