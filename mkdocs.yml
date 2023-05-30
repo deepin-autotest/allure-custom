@@ -34,11 +34,11 @@ theme:
     repo: fontawesome/brands/github
 
 # 右上角
-repo_name: funny-test/pdocr-rpc
-repo_url: "https://github.com/funny-test/pdocr-rpc"
+repo_name: funny-test/allure-custom
+repo_url: "https://github.com/funny-test/allure-custom"
 
 plugins:
-#  - termynal
+  - termynal
   - search
 #  - meta
 #  - markdownextradata:
