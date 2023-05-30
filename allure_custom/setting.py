@@ -1,9 +1,5 @@
 import os
 
-def check_path(file):
-    if not os.path.exists(file):
-        raise FileNotFoundError(f"{file}不存在！")
-
 
 class _Setting:
     """配置模块"""
@@ -17,9 +13,24 @@ class _Setting:
     _custom_plugin_static_path = os.path.join(_custom_allure_plugins_path, "custom-logo-plugin/static")
 
     static = os.path.join(_root_dir, "static")
-    logo_png = "logo.png"
-    check_path(static)
-    check_path(f"{static}/{logo_png}")
+    logo_png = os.path.join(_root_dir, "static", "logo.png")
+    favicon_ico = os.path.join(_root_dir, "static", "favicon.ico")
+
+    if not os.path.exists(static):
+        static = os.path.join(_root_dir, "static")
+    if not os.path.exists(f"{static}/{logo_png}"):
+        logo_png = os.path.join(_root_dir, "static", "logo.png")
+    if not os.path.exists(f"{static}/{favicon_ico}"):
+        favicon_ico = os.path.join(_root_dir, "static", "favicon.ico")
+
+    logo_height = "50px"
+    sidebar_color = "#21483F"
+    sidebar_line_size = "3px"
+    sidebar_line_color = "#DEA400"
+
+    html_title = "funny_test"
+    report_name = "funny_test"
+    report_language = "zh"
 
 
 setting = _Setting()
