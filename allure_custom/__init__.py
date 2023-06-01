@@ -2,6 +2,7 @@ import json
 import os
 import re
 from time import sleep
+from datetime import datetime
 
 from allure_custom.conf import setting
 
@@ -52,9 +53,6 @@ class AllureCustom:
         cls.add_logo()
         # print("配置已刷新！")
 
-    # @classmethod
-    # def serve(cls, report_path):
-    #     os.system(f"bash {setting._allure_cli_path} serve {report_path}")
 
     @classmethod
     def gen(cls, report_path: str, generate_allure_html: str, clean: bool = False):
@@ -113,5 +111,11 @@ class AllureCustom:
         os.system(f"cp -f {setting.static}/favicon.ico {generate_allure_html}/")
 
     @classmethod
-    def open(cls, gen_report_path):
-        os.system(f"bash {setting._allure_cli_path} open {gen_report_path}/")
+    def open(cls, generate_allure_html):
+        os.system(f"bash {setting._allure_cli_path} open {generate_allure_html}/")
+
+    @classmethod
+    def serve(cls, report_path):
+        generate_allure_html_tmp = f"/tmp/allure_{datetime.now().strftime('%m%d%p%I%M%S')}"
+        cls.gen(report_path=report_path, generate_allure_html=generate_allure_html_tmp)
+        cls.open(generate_allure_html_tmp)
