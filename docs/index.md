@@ -11,3 +11,21 @@
 3、侧边栏颜色
 
 4、默认暂时的语言
+
+---
+
+**Documentation**: <a href="https://funny-test.github.io/allure-custom" target="_blank">https://funny-test.github.io/allure-custom</a>
+
+**Source Code**: <a href="https://github.com/funny-test/allure-custom" target="_blank">https://github.com/funny-test/allure-custom</a>
+
+---
+
+## 使用方法
+
+```Python
+{!../example.py!}
+```
+
+## 效果展示
+
+![](./img/index.png)
