@@ -378,15 +378,15 @@
 <hr />
 <h2 id="_1">使用方法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">allure_custom</span> <span class="kn">import</span> <span class="n">AllureCustom</span>
-
 <span class="kn">from</span> <span class="nn">allure_custom.conf</span> <span class="kn">import</span> <span class="n">setting</span>
 
 <span class="c1"># 配置你的static静态文件</span>
 <span class="c1"># setting.static = &quot;~/static&quot;</span>
 <span class="c1"># setting.logo_png = &quot;logo.png&quot;</span>
 
-<span class="c1"># # 同步你的配置</span>
+<span class="c1"># 同步你的配置</span>
 <span class="n">AllureCustom</span><span class="o">.</span><span class="n">allure_custom</span><span class="p">()</span>
+
 <span class="c1"># 生成html测试报告</span>
 <span class="n">AllureCustom</span><span class="o">.</span><span class="n">gen</span><span class="p">(</span><span class="n">report_path</span><span class="o">=</span><span class="s2">&quot;~/Desktop/report&quot;</span><span class="p">,</span> <span class="n">generate_allure_html</span><span class="o">=</span><span class="s2">&quot;~/Desktop/html&quot;</span><span class="p">)</span>
 
