@@ -20,3 +20,8 @@
 
 ---
 
+## 安装
+
+```shell
+pip install allure-custom
+```

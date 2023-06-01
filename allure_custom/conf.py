@@ -7,7 +7,7 @@ class _Setting:
 
     _root_dir = os.path.dirname(os.path.abspath(__file__))
     _default_allure_path = os.path.join(_root_dir, "default_allure")
-    _custom_allure_path = os.path.join(_root_dir, "allure")
+    _custom_allure_path = os.path.join("/tmp", "_allure")
     _allure_cli_path = os.path.join(_custom_allure_path, "bin/allure")
     _allure_config_path = os.path.join(_custom_allure_path, "config")
     _custom_allure_plugins_path = os.path.join(_custom_allure_path, "plugins")

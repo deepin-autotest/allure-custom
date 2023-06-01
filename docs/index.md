@@ -20,6 +20,13 @@
 
 ---
 
+## 安装
+
+```console
+pip install allure-custom
+---> 100%
+```
+
 ## 使用方法
 
 ```Python

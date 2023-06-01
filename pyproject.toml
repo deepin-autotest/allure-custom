@@ -16,10 +16,6 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 
-#dependencies = [
-#    "pyscreenshot;sys_platform == 'linux'",
-#    "pillow;sys_platform == 'win32'",
-#]
 
 
 dynamic = ["version"]
@@ -46,9 +42,9 @@ include = [
     "README.md",
 ]
 
-#exclude = [
-#    ".idea"
-#]
+exclude = [
+    "allure_custom/allure",
+]
 
 
 [tool.hatch.version]
