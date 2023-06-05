@@ -58,6 +58,7 @@ class AllureCustom:
     def gen(cls, report_path: str, generate_allure_html: str, clean: bool = False):
         if not generate_allure_html:
             generate_allure_html = setting.static
+        cls.allure_custom()
         os.system(
             f"bash {setting._allure_cli_path} generate {report_path}/ -o {generate_allure_html}/ {'--clean' if clean else ''}"
         )

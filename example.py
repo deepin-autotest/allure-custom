@@ -5,9 +5,6 @@ from allure_custom.conf import setting
 # setting.static = "~/static"
 # setting.logo_png = "logo.png"
 
-# 同步你的配置
-AllureCustom.allure_custom()
-
 # 生成html测试报告
 AllureCustom.gen(report_path="~/Desktop/report", generate_allure_html="~/Desktop/html")
 
