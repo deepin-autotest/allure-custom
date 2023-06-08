@@ -14,9 +14,9 @@
 
 ---
 
-**Documentation**: <a href="https://funny-test.github.io/allure-custom" target="_blank">https://funny-test.github.io/allure-custom</a>
+**Documentation**: <a href="https://funny-dream.github.io/allure-custom" target="_blank">https://funny-dream.github.io/allure-custom</a>
 
-**Source Code**: <a href="https://github.com/funny-test/allure-custom" target="_blank">https://github.com/funny-test/allure-custom</a>
+**Source Code**: <a href="https://github.com/funny-dream/allure-custom" target="_blank">https://github.com/funny-dream/allure-custom</a>
 
 ---
 

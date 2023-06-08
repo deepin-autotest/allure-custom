@@ -32,8 +32,8 @@ doc = ["mkdocs-material"]
 #allurex = "allure-custom.allure:main"
 
 [project.urls]
-Source = "https://github.com/funny-test/allure-custom"
-Documentation = "https://funny-test.github.io/allure-custom"
+Source = "https://github.com/funny-dream/allure-custom"
+Documentation = "https://funny-dream.github.io/allure-custom"
 
 [project.files]
 include = [
