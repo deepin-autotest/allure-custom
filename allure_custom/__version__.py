@@ -1,3 +1,3 @@
 __title__ = "allure_custom"
 
-__version__ = "1.2.2"
+__version__ = "2023.6.14"
