@@ -8,6 +8,8 @@ from allure_custom.conf import setting
 
 
 class AllureCustom:
+    """定制报告"""
+
     @staticmethod
     def add_custom_plugin():
         if not os.path.exists(setting.static):

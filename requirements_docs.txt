@@ -1,0 +1,10 @@
+-i https://pypi.tuna.tsinghua.edu.cn/simple
+
+# 不要和requirements.txt在同一个环境安装，会又一些冲突
+
+mike
+mkdocs
+mkdocs-material
+mkdocs-markdownextradata-plugin
+mkdocs-pymdownx-material-extras
+mkdocs-mermaid2-plugin
