@@ -46,10 +46,35 @@ class AllureCustom:
             raise FileNotFoundError
         os.system(f"cp {setting.logo_png} {setting._custom_plugin_static_path}/")
 
+    @staticmethod
+    def check_copy(*dirs):
+        res = {}
+        for i in dirs:
+            if not os.path.exists(i):
+                raise NotADirectoryError
+            default_files = []
+            for root, dirs, files in os.walk("default_allure"):
+                for file in files:
+                    if file.endswith(".jar"):
+                        default_files.append(file)
+            res[i] = default_files
+
+        res = [len(i) for i in res.values()]
+        if len(set(res)) == 1:
+            return True
+        return False
+
+
     @classmethod
     def allure_custom(cls):
         os.system(f"rm -rf {setting._custom_allure_path}")
         os.system(f"cp -r {setting._default_allure_path} {setting._custom_allure_path}")
+
+        for i in range(10):
+            if cls.check_copy(setting._default_allure_path, setting._custom_allure_path):
+                break
+            sleep(1)
+
         cls.add_custom_plugin()
         cls.update_css()
         cls.add_logo()
@@ -64,7 +89,7 @@ class AllureCustom:
         os.system(
             f"bash {setting._allure_cli_path} generate {report_path}/ -o {generate_allure_html}/ {'--clean' if clean else ''}"
         )
-        sleep(1)
+        sleep(3)
         # title
         with open(
                 os.path.expanduser(f"{generate_allure_html}/index.html"),
