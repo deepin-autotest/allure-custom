@@ -6,7 +6,7 @@ from allure_custom.conf import setting
 # setting.logo_png = "logo.png"
 
 # 生成html测试报告
-AllureCustom.gen(report_path="~/Desktop/report", generate_allure_html="~/Desktop/html")
+AllureCustom.gen(report_path="~/Desktop/report", generate_allure_html="~/Desktop/html", clean=False)
 
 # 打开html测试报告
 AllureCustom.open(generate_allure_html="~/Desktop/html")
