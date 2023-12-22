@@ -51,7 +51,7 @@ class AllureCustom:
         res = {}
         for i in dirs:
             if not os.path.exists(i):
-                raise NotADirectoryError
+                raise FileNotFoundError(i)
             default_files = []
             for root, dirs, files in os.walk("default_allure"):
                 for file in files:
@@ -68,7 +68,8 @@ class AllureCustom:
     @classmethod
     def allure_custom(cls):
         os.system(f"rm -rf {setting._custom_allure_path}")
-        os.system(f"cp -r {setting._default_allure_path} {setting._custom_allure_path}")
+        os.system(f"mkdir -p {setting._custom_allure_path}")
+        os.system(f"cp -r {setting._default_allure_path}/* {setting._custom_allure_path}/")
 
         for i in range(10):
             if cls.check_copy(setting._default_allure_path, setting._custom_allure_path):
